@@ -35,6 +35,6 @@ if %errorlevel% neq 0 (
 echo [%time%] Sync cycle completed.
 echo.
 echo Waiting 10 seconds...
-timeout /t 10 /nobreak >nul
+ping 127.0.0.1 -n 11 > nul
 
 goto loop

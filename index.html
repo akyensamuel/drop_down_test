@@ -18,15 +18,6 @@
                 </div>
             </template>
         </div>
-        <div x-data="dropdown">
-            <input type="text" @input="filter($event.target.value)">
-            <template x-for="item in filtered" :key="item.id">
-                <div class="border p-2 my-2">
-                    <p x-text="item.name"></p>
-                    <p>Price: $<span x-text="item.price"></span></p>
-                </div>
-            </template>
-        </div>
         <script src="script.js"></script>
         <script src="alpine.min.js" defer></script>
     </main>

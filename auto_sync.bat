@@ -35,6 +35,11 @@ if %errorlevel% neq 0 (
 echo [%time%] Sync cycle completed.
 echo.
 echo Waiting 10 seconds...
-echo WScript.Sleep 10000 > temp_sleep.vbs && cscript //nologo temp_sleep.vbs && del temp_sleep.vbs
+for /l %%i in (1,1,10) do (
+    echo %%i...
+    for /l %%j in (1,1,100) do (
+        for /l %%k in (1,1,1000) do rem
+    )
+)
 
 goto loop

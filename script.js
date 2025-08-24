@@ -15,9 +15,9 @@ document.addEventListener("alpine:init", () => {
         toggle() {
             this.open = !this.open;
         },
-        filter(query){
-            this.db = this.db.filter(item => item.name.toLowerCase().includes(query.toLowerCase()));
-        }
+        // filter(query){
+        //     this.db = this.db.filter(item => item.name.toLowerCase().includes(query.toLowerCase()));
+        // }
 
     }));
 

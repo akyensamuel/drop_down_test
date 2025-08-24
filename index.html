@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <main class="p-4">
+        <input type="text">
+        <!-- items to appear in this div -->
+        <div x-data="{ items: db }">
+            <template x-for="item in items" :key="item.id">
+                <div class="border p-2 my-2">
+                    <h5 x-text="item.name"></h5>
+                    <p>Price: $<span x-text="item.price"></span></p>
+                </div>
+            </template>
+        </div>
+
+        <script src="script.js"></script>
+        <script src="alpine.min.js" defer></script>
+    </main>
+</body>
+</html>

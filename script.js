@@ -10,12 +10,13 @@ document.addEventListener("alpine:init", () => {
 
     Alpine.data("dropdown", () => ({
         db: db,
+        filtered: [], 
         open: false,
         toggle() {
             this.open = !this.open;
         },
-        filter(){
-            // logic
+        filter(query){
+            this.db = this.db.filter(item => item.name.toLowerCase().includes(query.toLowerCase()));
         }
 
     }));

@@ -12,7 +12,9 @@ document.addEventListener("alpine:init", () => {
         db: db,
         filtered: [], 
         open: false,
-        init(){},
+        init(){
+            this.filtered
+        },
         toggle() {
             this.open = !this.open;
         },

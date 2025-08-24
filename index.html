@@ -8,9 +8,9 @@
 </head>
 <body>
     <main class="p-4">
-        <input type="text">
         <!-- items to appear in this div -->
         <div x-data="dropdown">
+            <input type="text">
             <template x-for="item in db" :key="item.id">
                 <div class="border p-2 my-2">
                     <p x-text="item.name"></p>

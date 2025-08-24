@@ -10,7 +10,7 @@
     <main class="p-4">
         <input type="text">
         <!-- items to appear in this div -->
-        <div x-data="{ items: db }">
+        <div x-data="">
             <template x-for="item in items" :key="item.id">
                 <div class="border p-2 my-2">
                     <h5 x-text="item.name"></h5>

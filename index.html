@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="bootstrap.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+  </head>
+  <body>
     <main class="p-4">
-        <!-- items to appear in this div -->
-        <div x-data="dropdown">
-            <input type="text" @input="filter($event.target.value)" @focus="open = true" class="form-control" x-ref="inputFieldRef">
-            <div>
-                <template x-if="open">
-                    <div class="border p-2 my-2">
-                        <template x-for="item in filtered" :key="item.id">
-                            <div class="border p-2 my-2" @click="Select(item, $refs.inputFieldRef)">
-                                <p x-text="item.name"></p>
-                                <p>Price: $<span x-text="item.price"></span></p>
-                            </div>
-                        </template>
-                    </div>
-                </template>
+      <!-- items to appear in this div -->
+      <div x-data="dropdown">
+        <input
+          type="text"
+          @input="filter($event.target.value)"
+          @focus="open = true"
+          class="form-control"
+          x-ref="inputFieldRef"
+        />
+        <div>
+          <template x-if="open">
+            <div class="border p-2 my-2">
+              <template x-for="item in filtered" :key="item.id">
+                <div
+                  class="border p-2 my-2"
+                  @click="Select(item, $refs.inputFieldRef)"
+                >
+                  <p x-text="item.name"></p>
+                  <p>Price: $<span x-text="item.price"></span></p>
+                </div>
+              </template>
             </div>
+          </template>
         </div>
-        <script src="script.js"></script>
-        <script src="alpine.min.js" defer></script>
+      </div>
+      <script src="script.js"></script>
+      <script src="alpine.min.js" defer></script>
     </main>
-</body>
+  </body>
 </html>

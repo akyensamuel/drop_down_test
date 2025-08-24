@@ -25,6 +25,7 @@ document.addEventListener("alpine:init", () => {
         Select(item, inputField){
             this.filtered = [item];
             this.open = false;
+            inputField.value = item.name;
         }
     }));
 

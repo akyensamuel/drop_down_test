@@ -35,6 +35,6 @@ if %errorlevel% neq 0 (
 echo [%time%] Sync cycle completed.
 echo.
 echo Waiting 10 seconds...
-ping 127.0.0.1 -n 11 > nul
+echo WScript.Sleep 10000 > temp_sleep.vbs && cscript //nologo temp_sleep.vbs && del temp_sleep.vbs
 
 goto loop

@@ -11,11 +11,11 @@
         <input type="text">
         <!-- items to appear in this div -->
         <div x-data="dropdown">
-            <template x-for="item in items" :key="item.id">
-                <!-- <div class="border p-2 my-2">
-                    <h5 x-text="item.name"></h5>
+            <template x-for="item in db" :key="item.id">
+                <div class="border p-2 my-2">
+                    <p x-text="item.name"></p>
                     <p>Price: $<span x-text="item.price"></span></p>
-                </div> -->
+                </div>
             </template>
         </div>
 

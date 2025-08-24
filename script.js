@@ -22,7 +22,7 @@ document.addEventListener("alpine:init", () => {
             this.filtered = this.db.filter(item => item.name.toLowerCase().includes(query.toLowerCase()));
             console.log(query);
         },
-        Select(item){
+        Select(item, inputField){
             this.filtered = [item];
             this.open = false;
         }

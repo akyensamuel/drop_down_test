@@ -10,7 +10,7 @@
     <main class="p-4">
         <!-- items to appear in this div -->
         <div x-data="dropdown">
-            <input type="text" @input="filter($event.target.value)" @focus="open = true">
+            <input type="text" @input="filter($event.target.value)" @focus="open = true" class="form-control">
             <div>
                 <template x-if="open">
                     <div class="border p-2 my-2">

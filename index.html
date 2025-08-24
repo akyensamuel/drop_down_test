@@ -23,7 +23,7 @@
               <template x-for="item in filtered" :key="item.id">
                 <div
                   class="border p-2 my-2"
-                  @click="Select(item, $refs.inputFieldRef)"
+                  @click="select(item, $refs.inputFieldRef)"
                 >
                   <p x-text="item.name"></p>
                   <p>Price: $<span x-text="item.price"></span></p>

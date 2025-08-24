@@ -23,7 +23,7 @@ document.addEventListener("alpine:init", () => {
       );
       console.log(query);
     },
-    Select(item, inputField) {
+    select(item, inputField) {
       this.open = false;
       inputField.value = item.name;
     },

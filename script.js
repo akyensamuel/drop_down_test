@@ -14,6 +14,10 @@ document.addEventListener("alpine:init", () => {
         toggle() {
             this.open = !this.open;
         },
+        filter(){
+            // logic
+        }
+
     }));
 
 });
